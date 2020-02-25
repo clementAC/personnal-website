@@ -9,6 +9,7 @@ import {
   NavItem,
   NavLink
 } from "reactstrap";
+import ThemeToggler from "./ThemeToggler";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,6 +39,9 @@ const Header = () => {
                   Me contacter
                 </NavLink>
               </Link>
+            </NavItem>
+            <NavItem className="d-flex align-items-center">
+              <ThemeToggler />
             </NavItem>
           </Nav>
         </Collapse>
