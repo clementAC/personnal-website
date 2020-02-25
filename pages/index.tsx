@@ -1,17 +1,22 @@
 import * as React from "react";
 import { NextPage } from "next";
 import Layout from "../components/Layout";
+import homeStyle from "./index.style";
 
 const Home: NextPage = () => (
   <Layout title="Clément Aceituno">
-    <section>
-      <img src="/img/profil.jpg" alt="Myself" />
-      <div>
+    <section className="introduction d-flex flex-column align-items-center justify-content-center text-center">
+      <img
+        src="/img/profil.jpg"
+        alt="Myself"
+        className="rounded-circle profilPic"
+      />
+      <div className="introduction-content mt-5 p-3 mx-2">
         <h1>Clément Aceituno</h1>
         <h3>Web technologies enthousiast</h3>
       </div>
     </section>
-    <div>
+    <div className="container resume-content pt-3">
       <section>
         <h1>Profil</h1>
         <article>
@@ -140,6 +145,7 @@ const Home: NextPage = () => (
         </article>
       </section>
     </div>
+    <style jsx>{homeStyle}</style>
   </Layout>
 );
 
