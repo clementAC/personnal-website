@@ -1,11 +1,6 @@
 import css from "styled-jsx/css";
 
 export default css`
-  .switch-container img {
-    height: 15px;
-    margin: 0 5px;
-  }
-
   /* The switch - the box around the slider */
   .switch {
     position: relative;

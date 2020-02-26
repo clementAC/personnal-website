@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Link from "next/link";
 import {
   Navbar,
@@ -10,15 +10,23 @@ import {
   NavLink
 } from "reactstrap";
 import ThemeToggler from "./ThemeToggler";
+import ThemeContext from "../context/Theme";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { isDark } = useContext(ThemeContext);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <header>
-      <Navbar color="light" light expand="md" fixed="top">
+      <Navbar
+        color={isDark ? "dark" : "light"}
+        light={!isDark}
+        dark={isDark}
+        expand="md"
+        fixed="top"
+      >
         <Link href="/">
           <NavbarBrand to="/">Clément Aceituno</NavbarBrand>
         </Link>
@@ -40,7 +48,7 @@ const Header = () => {
                 </NavLink>
               </Link>
             </NavItem>
-            <NavItem className="d-flex align-items-center">
+            <NavItem className="d-flex align-items-center py-2">
               <ThemeToggler />
             </NavItem>
           </Nav>
