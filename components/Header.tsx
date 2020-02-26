@@ -1,14 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useContext } from "react";
 import Link from "next/link";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarToggler,
-  Collapse,
-  Nav,
-  NavItem,
-  NavLink
-} from "reactstrap";
 import ThemeToggler from "./ThemeToggler";
 import ThemeContext from "../context/Theme";
 
@@ -20,40 +12,50 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar
-        color={isDark ? "dark" : "light"}
-        light={!isDark}
-        dark={isDark}
-        expand="md"
-        fixed="top"
+      <nav
+        className={`navbar navbar-expand-md fixed-top  ${
+          isDark ? "navbar-dark bg-dark" : "navbar-light bg-light"
+        }`}
       >
         <Link href="/">
-          <NavbarBrand to="/">Clément Aceituno</NavbarBrand>
+          <a className="navbar-brand">Clément Aceituno</a>
         </Link>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink
+
+        <button
+          className="navbar-toggler"
+          type="button"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onClick={toggle}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
+          id="contentToCollapse"
+        >
+          <ul className="navbar-nav ml-auto d-flex align-items-center">
+            <li className="nav-item active">
+              <a
+                className="nav-link"
                 href={`${process.env.PUBLIC_URL}/clementAceituno.pdf`}
                 download
               >
                 Télécharger mon CV
-              </NavLink>
-            </NavItem>
-            <NavItem>
+              </a>
+            </li>
+            <li className="nav-item">
               <Link href="/contact">
-                <NavLink to="/contact" activeClassName="active">
-                  Me contacter
-                </NavLink>
+                <a className="nav-link">Me contacter</a>
               </Link>
-            </NavItem>
-            <NavItem className="d-flex align-items-center py-2">
+            </li>
+            <li className="nav-item">
               <ThemeToggler />
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
   );
 };
