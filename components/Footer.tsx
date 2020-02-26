@@ -5,7 +5,7 @@ import {
   faGithubSquare,
   faTwitter
 } from "@fortawesome/free-brands-svg-icons";
-import footerStyles from "./Footer.styles";
+import footerStyles from "../style/Footer.styles";
 
 const Footer = () => {
   return (

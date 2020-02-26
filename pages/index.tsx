@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NextPage } from "next";
 import Layout from "../components/Layout";
-import homeStyle from "./index.style";
+import homeStyle from "../style/index.style";
 
 const Home: NextPage = () => (
   <Layout title="Clément Aceituno">
