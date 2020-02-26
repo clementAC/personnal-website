@@ -23,7 +23,9 @@ const Layout: React.FunctionComponent<Props> = ({
           href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap"
           rel="stylesheet"
         />
+        <link rel="shortcut icon" href="/img/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Portfolio de clément aceituno" />
       </Head>
       <Header />
       <main className="main-content d-flex flex-column">{children}</main>
