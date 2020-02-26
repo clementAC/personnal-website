@@ -1,0 +1,17 @@
+{
+    "projectName": "personnal-website",
+    "version": "3.0",
+    "frontend": "javascript",
+    "javascript": {
+        "framework": "react",
+        "config": {
+            "SourceDir": "/",
+            "DistributionDir": "out",
+            "BuildCommand": "npm run static",
+            "StartCommand": "npm run-script start"
+        }
+    },
+    "providers": [
+        "awscloudformation"
+    ]
+}
