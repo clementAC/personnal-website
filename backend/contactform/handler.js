@@ -1,11 +1,9 @@
 import AWS from "aws-sdk";
-import querystring from "querystring";
 
 const SES = new AWS.SES({ region: "eu-west-1" });
 
 export async function contact(event) {
-  const params = querystring.parse(event.body);
-  console.log(params["firstname"]);
+  const body = JSON.parse(event.body);
   try {
     const sesParams = {
       Destination: {
@@ -16,10 +14,10 @@ export async function contact(event) {
           Html: {
             Charset: "UTF-8",
             Data: `<!DOCTYPE html>
-            <p>Prénom: ${params["firstname"]}</p>
-            <p>Nom: ${params["lastname"]}</p>
-            <p>email: ${params["email"]}</p>
-            <p>message: ${params["message"]}</p>`
+              <p>Prénom: ${body.firstname}</p>
+              <p>Nom: ${body.lastname}</p>
+              <p>email: ${body.email}</p>
+              <p>message: ${body.message}</p>`
           }
         },
         Subject: {
@@ -30,9 +28,7 @@ export async function contact(event) {
       Source: "contact@clementaceituno.dev"
     };
 
-    const response = await SES.sendEmail(sesParams).promise();
-    console.log(response);
-
+    await SES.sendEmail(sesParams).promise();
     return {
       statusCode: 200,
       headers: {

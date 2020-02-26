@@ -11,14 +11,22 @@ const Contact: React.FC = () => {
   const submitHandler = async (event: React.FormEvent<HTMLFormElement>) => {
     try {
       event.preventDefault();
-      const bodyData = new FormData(form.current!);
-
+      const formEntries = new FormData(form.current!).entries();
+      const bodyData: { [key: string]: any } = {
+        lastname: "",
+        firstname: "",
+        email: "",
+        message: ""
+      };
+      for (let entry of formEntries) {
+        bodyData[entry[0]] = entry[1];
+      }
       const response = await fetch(
         `https://0e2qmvm2g2.execute-api.eu-west-1.amazonaws.com/dev/contact`,
         {
           method: "POST",
           mode: "cors",
-          body: bodyData
+          body: JSON.stringify(bodyData)
         }
       );
       console.log(response);
