@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import Header from "./Header";
 import Footer from "./Footer";
-import layoutStyle from "./Layout.styles";
 import ThemeContext from "../context/Theme";
 
 type Props = {
@@ -27,11 +26,9 @@ const Layout: React.FunctionComponent<Props> = ({
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Header />
-      <main className="main-content">{children}</main>
+      <main className="main-content d-flex flex-column">{children}</main>
       <Footer />
-      <style jsx global>
-        {layoutStyle}
-      </style>
+
       <style jsx global>
         {`
           * {
@@ -57,6 +54,26 @@ const Layout: React.FunctionComponent<Props> = ({
           a:active {
             color: ${theme.colors.link};
             text-decoration: none;
+          }
+        `}
+      </style>
+      <style jsx global>
+        {`
+          .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+          }
+          .icon-light {
+            color: white;
+          }
+
+          .icon-dark {
+            color: black;
+          }
+
+          .main-content {
+            flex-grow: 1;
           }
         `}
       </style>
