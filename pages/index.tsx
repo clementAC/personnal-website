@@ -21,16 +21,15 @@ const Home: NextPage = () => (
         <h1>Profil</h1>
         <article>
           <p>
-            Après avoir recu mon diplôme d&apos;ingénieur en système
-            d&apos;information de L&apos;ECE Paris, je décide de me lancer dans
-            une aventure entrepreunariale. Avec un camarade de promotion nous
-            créeons Luseed avec comme vision d&apos;aider les marques à créer
-            des expériences utilisateurs surprenantes à base d&apos;objets
-            connectés. Durant cette aventure, j&apos;ai enormément appris tant
-            sur le plan technologique que sur le plan humain. J&apos;ai pu
-            utiliser des technologies et des services cloud serverless pour
-            accélerer notre developpement commercial tout en maintenant les
-            coûts d&apos;infrastructures bas.
+            Après avoir reçu mon diplôme d'ingénieur en système d'information de
+            L'ECE Paris, je décide de me lancer dans une aventure
+            entrepreunariale. Avec un camarade de promotion nous créons Luseed
+            avec comme vision d'aider les marques à créer des expériences
+            utilisateurs surprenantes à base d'objets connectés. Durant cette
+            aventure, j'ai énormément appris tant sur le plan technologique que
+            sur le plan humain. J'ai pu utiliser des techniques et des services
+            cloud serverless pour accélérer notre développement commercial tout
+            en maintenant les coûts d'infrastructures bas.
           </p>
         </article>
       </section>
@@ -45,18 +44,17 @@ const Home: NextPage = () => (
           <p>
             Luseed aide les marques à interagir avec leurs audiences dans le
             monde physique en concevant des solutions matérielles et
-            logicielles. En 2019, Luseed c&apos;est 150K€ de chiffres
-            d&apos;affaires avec 2 salariés
+            logicielles.
           </p>
           <p>
-            Je suis en charge des choix technologiques et des developpements des
+            Je suis en charge des choix technologiques et des développements des
             solutions (Applications web, APIs, Tableaux de bord) de
-            l&apos;entreprise. L&apos;utilisation de solutions serverless basées
-            sur les services AWS, nous permet d&apos;avoir un coût
-            d&apos;infrastructure très faible (proche de 0) et d&apos;être
-            scalable dès le premier déploiement. J'ai egalement mis en place de
-            processus de gestion de projet et de déploiement qui nous ont permis
-            de booster notre developpement commercial
+            l'entreprise. L'utilisation de solutions serverless basées sur les
+            services AWS, nous permet d'avoir un coût d'infrastructure très
+            faible (proche de 0) et d'être scalable dès le premier déploiement.
+            J'ai également mis en place de processus de gestion de projets et de
+            déploiement qui nous ont permis de booster notre développement
+            commercial.
           </p>
         </article>
         <article>
@@ -71,7 +69,7 @@ const Home: NextPage = () => (
             ingénieurs de l'ECE Paris les bonnes pratiques du développement web.
             Je concois les cours, les travaux pratiques et les projets pour
             rendre accessibles des notions parfois complexes. A l'issue de ces
-            cours, mes élèves sont capables de déployer des application web
+            cours, mes élèves sont capables de déployer des applications web
             complexes (front, back, base de données)
           </p>
         </article>
@@ -88,9 +86,9 @@ const Home: NextPage = () => (
             groupe et porté par le service. J'ai receuilli les besoins des
             utilisateurs, concu et developpé une refonte majeure de cet outil.
             Ensuite j'en suis devenu référent, ce qui m'a permis d'aborder des
-            sujet d'assitance utilisateur et de formation. Enfin j'ai assisté le
-            pilote de service sur des sujets de gestion d'equipe de prestation
-            de service et de gestion de service
+            sujets d'assitance utilisateur et de formation. Enfin, j'ai assisté
+            le pilote de service sur des sujets de gestion d'equipe de
+            prestation de service et de gestion de service
           </p>
         </article>
       </section>
