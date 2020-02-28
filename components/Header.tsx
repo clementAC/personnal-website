@@ -37,11 +37,7 @@ const Header = () => {
         >
           <ul className="navbar-nav ml-auto d-flex align-items-center">
             <li className="nav-item active">
-              <a
-                className="nav-link"
-                href={`${process.env.PUBLIC_URL}/clementAceituno.pdf`}
-                download
-              >
+              <a className="nav-link" href="/doc/clementAceituno.pdf" download>
                 Télécharger mon CV
               </a>
             </li>

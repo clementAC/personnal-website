@@ -12,7 +12,7 @@ const Footer = () => {
     <div className="container my-4 d-flex justify-content-between align-items-center">
       <span>Clément Aceituno</span>
       <div className="d-flex align-items-center">
-        <a href={`${process.env.PUBLIC_URL}/clementAceituno.pdf`} download>
+        <a href={`/doc/clementAceituno.pdf`} download>
           Mon CV
         </a>
         {" - "}
